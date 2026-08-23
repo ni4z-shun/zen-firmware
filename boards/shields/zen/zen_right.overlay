@@ -32,7 +32,8 @@
     col-offset = <7>;
 };
 
-&pmw3610 {
+// ここを &paw3222 に変更します！
+&paw3222 {
     cpi = <600>; 
     spi-max-frequency = <2000000>;
 };
