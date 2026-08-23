@@ -20,3 +20,9 @@
 &zen_transform {
     col-offset = <7>;
 };
+
+// ↓ ここから下に追記します！
+&pmw3610 {
+    cpi = <600>; 
+    spi-max-frequency = <2000000>;
+};
