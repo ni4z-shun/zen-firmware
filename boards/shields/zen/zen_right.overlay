@@ -22,7 +22,7 @@
 };
 
 // ↓ ここから下に追記します！
-&pmw3610 {
+left_trackball_pmw3610_split {
     cpi = <600>; 
     spi-max-frequency = <2000000>;
 };
