@@ -7,21 +7,10 @@
         <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
         <&zip_temp_layer 1 500>;
 
-    // レイヤー5: 縦スクロール用
-    scroller_v {
-        layers = <5>;
+    scroller {
+        layers = <4>;
         input-processors =
             <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,
-            <&zip_xy_to_scroll_mapper>,
-            <&scroll_scaler 1 28>;
-        process-next;
-    };
-
-    // レイヤー6: 横スクロール用（縦の動きを横に変換）
-    scroller_h {
-        layers = <6>;
-        input-processors =
-            <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT)>,
             <&zip_xy_to_scroll_mapper>,
             <&scroll_scaler 1 28>;
         process-next;
@@ -30,10 +19,4 @@
 
 &zen_transform {
     col-offset = <7>;
-};
-
-// ここを &paw3222 に変更します！
-&paw3222 {
-    cpi = <600>; 
-    spi-max-frequency = <2000000>;
 };
