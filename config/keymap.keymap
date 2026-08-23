@@ -48,7 +48,7 @@
             bindings = <
 &trans  &kp PLUS      &kp MINUS     &kp ASTERISK  &kp SLASH     &kp EQUAL     &trans    &kp FSLH  &kp ASTRK  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9
 &trans  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp HOME  &trans    &kp MINUS  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5        &trans    &trans    &kp END    &trans           &kp GRAVE        &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &trans    &trans    &kp END    &trans           &kp GRAVE        &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3
 &trans  &trans        &trans        &trans        &trans        &trans        &trans    &trans    &trans     &kp KP_NUMBER_0  &kp DOT          &kp EQUAL
             >;
         };
