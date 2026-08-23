@@ -7,25 +7,20 @@
         <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
         <&zip_temp_layer 1 500>;
 
-    // レイヤー5: 縦スクロール用（横ブレ防止）
+// レイヤー5: 縦スクロール用
     scroller_v {
         layers = <5>;
         input-processors =
-            // Xを0/1倍、Yを1/1倍にする（＝横の動きだけ完全に消す）
-            <&zip_xy_scaler 0 1 1 1>,
             <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,
             <&zip_xy_to_scroll_mapper>,
             <&scroll_scaler 1 28>;
         process-next;
     };
 
-    // レイヤー6: 横スクロール用（物理的な縦の動きだけを横スクロールに変換）
+    // レイヤー6: 横スクロール用（縦の動きを横に変換）
     scroller_h {
         layers = <6>;
         input-processors =
-            // まず物理的な横ブレ(X)を0にして消す
-            <&zip_xy_scaler 0 1 1 1>,
-            // 残った縦の動き(Y)を横(X)に変換する
             <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT)>,
             <&zip_xy_to_scroll_mapper>,
             <&scroll_scaler 1 28>;
