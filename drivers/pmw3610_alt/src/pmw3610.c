@@ -476,8 +476,8 @@ static int pmw3610_report_data(const struct device *dev) {
     // --- ここからが角度補正の魔法の数式 ---
     // 時計回りに15度（-15度）回転させるための係数だよ
     // もし角度を変えたい時は、Google検索の電卓などで「cos(-20度)」「sin(-20度)」みたいに計算して、ここの少数を書き換えてね！
-    float cos_theta = 0.9659; // cos(-15度) の値
-    float sin_theta = -0.2588; // sin(-15度) の値
+    float cos_theta = 0.9848; // cos(-10度) の値
+    float sin_theta = -0.1736; // sin(-10度) の値
 
     // 回転行列の計算をして、最終的な「x」「y」に上書きするよ
     int16_t x = (int16_t)(raw_x * cos_theta - raw_y * sin_theta);
