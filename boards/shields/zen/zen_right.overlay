@@ -4,8 +4,8 @@
 
 &pointing_listener {
     input-processors =
-        <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
-        <&zip_temp_layer 1 500>;
+        <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>; 
+        //<&zip_temp_layer 1 500>; --マウスレイヤー機能 要らないのでコメントアウト(戻す場合は上行のセミコロンをコンマに)
 
     scroller {
         layers = <4>;
