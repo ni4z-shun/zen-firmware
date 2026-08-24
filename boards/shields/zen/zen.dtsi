@@ -73,7 +73,7 @@
 
     pointing_listener: pointing_listener {
         compatible = "zmk,input-listener";
-        status = "disabled";
+        status = "okay";  // 変更してみた
     };
 
     vbatt: vbatt {
