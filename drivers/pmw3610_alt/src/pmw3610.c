@@ -458,15 +458,16 @@ static int pmw3610_report_data(const struct device *dev) {
 
 // 12-bit two's complement value to int16_t
 // adapted from https://stackoverflow.com/questions/70802306/convert-a-12-bit-signed-number-in-c
-//////// ↓元のコード----------------------------------------------------------------------------------
-////////#define TOINT16(val, bits) (((struct { int16_t value : bits; }){val}).value)
 
-////////    int16_t x = TOINT16((buf[PMW3610_X_L_POS] + ((buf[PMW3610_XY_H_POS] & 0xF0) << 4)), 12);
-////////    int16_t y = TOINT16((buf[PMW3610_Y_L_POS] + ((buf[PMW3610_XY_H_POS] & 0x0F) << 8)), 12);
-////////    LOG_DBG("x/y: %d/%d", x, y);
+//---------------------------------------------------------------------------------------------------
+#define TOINT16(val, bits) (((struct { int16_t value : bits; }){val}).value)
+
+    int16_t x = TOINT16((buf[PMW3610_X_L_POS] + ((buf[PMW3610_XY_H_POS] & 0xF0) << 4)), 12);
+    int16_t y = TOINT16((buf[PMW3610_Y_L_POS] + ((buf[PMW3610_XY_H_POS] & 0x0F) << 8)), 12);
+    LOG_DBG("x/y: %d/%d", x, y);
 //---------------------------------------------------------------------------------------------------
 		
-// ↓角度調整のための修正コード-------------------------------------------------------------------------
+/* ↓角度調整のための修正コード-------------------------------------------------------------------------
 #define TOINT16(val, bits) (((struct { int16_t value : bits; }){val}).value)
 
     // 一旦、センサーから読み取ったそのままの数値を「raw_x」「raw_y」として受け取るよ
@@ -482,7 +483,7 @@ static int pmw3610_report_data(const struct device *dev) {
     // 回転行列の計算をして、最終的な「x」「y」に上書きするよ
     int16_t x = (int16_t)(raw_x * cos_theta - raw_y * sin_theta);
     int16_t y = (int16_t)(raw_x * sin_theta + raw_y * cos_theta);
-// --- 補正ここまで -------------------------------------------------------------------------------
+*/ 
 
     LOG_DBG("x/y: %d/%d", x, y);
 
