@@ -4,7 +4,7 @@
 
 &pointing_listener {
     status = "okay";
-    device = <&pmw3610>;
+    device = <&pointing_device>;
     input-processors =
         <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>; 
 
