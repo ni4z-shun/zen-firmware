@@ -3,7 +3,6 @@
 #include <dt-bindings/zmk/input_transform.h>
 
 &pointing_listener {
-&pointing_listener {
     status = "okay";
     device = <&pmw3610>;
     input-processors =
