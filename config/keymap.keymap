@@ -22,15 +22,15 @@
 &kp ESCAPE  &kp Q         &kp W         &kp E  &kp R  &kp T      &kp Y      &kp U          &kp I  &kp O           &kp P           &mo 2
 &kp TAB     &kp A         &kp S         &kp D  &kp F  &kp G      &kp H      &kp J          &kp K  &kp L           &kp MINUS       &mo 3
 &kp LSHFT   &kp Z         &kp X         &kp C  &kp V  &kp B      &mkp MCLK  &kp BACKSPACE  &kp N  &kp M           &kp COMMA       &kp DOT          &kp UP_ARROW  &mo 4
-&kp LCTRL   &kp LEFT_WIN  &kp LEFT_ALT  &mo 6  &mo 5  &mkp LCLK  &kp SPACE  &lt 3 ENTER    &mo 3  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
+&kp LCTRL   &kp LEFT_WIN  &kp LEFT_ALT  &mo 6  &mo 5  &mkp LCLK  &kp SPACE  &lt 1 ENTER    &mo 3  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
             >;
         };
 
         layer_1 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp N9  &kp N0  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp N5  &kp N6  &kp N7  &kp N8  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp N1  &kp N2  &kp N3  &kp N4  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
@@ -46,10 +46,10 @@
 
         layer_3 {
             bindings = <
-&trans  &kp PLUS      &kp MINUS     &kp ASTERISK  &kp SLASH     &kp EQUAL     &trans    &kp FSLH  &kp ASTRK  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9
-&trans  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp HOME  &trans    &kp MINUS  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &trans    &trans    &kp END    &trans           &kp GRAVE        &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3
-&trans  &trans        &trans        &trans        &trans        &trans        &trans    &trans    &trans     &kp KP_NUMBER_0  &kp DOT          &kp EQUAL
+&trans  &none   &none           &kp UP_ARROW    &none            &none   &none   &none           &kp UP_ARROW    &none            &none  &none
+&trans  &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none   &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none  &none
+&trans  &none   &none           &none           &none            &none   &trans  &trans          &none           &none            &none  &none  &none  &none
+&trans  &trans  &trans          &trans          &trans           &trans  &trans  &trans          &none           &none            &none  &none
             >;
         };
 
