@@ -483,9 +483,9 @@ static int pmw3610_report_data(const struct device *dev) {
     // 回転行列の計算をして、最終的な「x」「y」に上書きするよ
     int16_t x = (int16_t)(raw_x * cos_theta - raw_y * sin_theta);
     int16_t y = (int16_t)(raw_x * sin_theta + raw_y * cos_theta);
-*/ 
 
     LOG_DBG("x/y: %d/%d", x, y);
+*/ 
 
 #ifdef CONFIG_PMW3610_ALT_SMART_ALGORITHM
     int16_t shutter = ((int16_t)(buf[PMW3610_SHUTTER_H_POS] & 0x01) << 8) 
